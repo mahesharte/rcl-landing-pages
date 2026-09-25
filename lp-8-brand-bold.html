@@ -13,15 +13,15 @@
     --purple-soft:#EAF0F6;
     --secondary:#942F6C;
     --secondary-deep:#6E2150;
-    --accent-blue:#5C80E3;
+    --accent-blue:#C9A24B;
     --navy:#0D3E62;
     --gold:#C9A24B;
     --gold-light:#E9CD60;
-    --ink:#1C1230;
-    --ink-soft:#5B5470;
+    --ink:#0B1622;
+    --ink-soft:#55606B;
     --paper:#FFFFFF;
-    --line:#E4DEEF;
-    --radius:14px;
+    --line:#DCE3EA;
+    --radius:0px;
     box-sizing:border-box;
     padding-top:env(safe-area-inset-top,0px);
     padding-bottom:env(safe-area-inset-bottom,0px);
@@ -360,20 +360,52 @@
     .headerbar{padding:12px 18px;gap:10px;}
     .final-ctas{flex-direction:column;align-items:stretch;width:100%;}
     .final-ctas .btn{width:100%;text-align:center;justify-content:center;}
+    .hero-ctas{flex-direction:column;align-items:stretch;width:100%;}
+    .hero-ctas .btn{width:100%;text-align:center;justify-content:center;}
   }
 
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --paper:#0B1620;--ink:#F0F4F8;--ink-soft:#AEBCC9;--line:#20303E;--purple-soft:#132A3E;
-    }
-    :root:not([data-theme="light"]) header{background:rgba(21,11,34,.9);}
-    :root:not([data-theme="light"]) .why-item{background:#1C1030;}
-    :root:not([data-theme="light"]) .why-grid{background:#31234A;border-color:#31234A;}
-    :root:not([data-theme="light"]) .lang-box{background:#241238;border-color:#31234A;}
-  }
-  :root[data-theme="dark"]{
-    --paper:#0B1620;--ink:#F0F4F8;--ink-soft:#AEBCC9;--line:#20303E;--purple-soft:#132A3E;
-  }
+  /* ---------- brand bold theme (navy / magenta / gold only) ---------- */
+  header{border-bottom:3px solid var(--gold);}
+  .btn{border-radius:0;text-transform:uppercase;letter-spacing:.07em;font-weight:700;}
+  .btn-primary:hover{background:var(--secondary);box-shadow:0 14px 28px -10px rgba(148,47,108,.5);}
+  .btn-white:hover{background:var(--gold);color:#fff;}
+  .btn-ghost:hover{background:var(--gold);color:var(--purple) !important;border-color:var(--gold) !important;}
+  .hero{background:linear-gradient(115deg,var(--purple-deep) 0%,var(--purple) 55%,var(--gold) 135%);border-bottom:6px solid var(--gold);}
+  .kicker{background:var(--gold);color:var(--purple-deep);border:none;border-radius:0;font-weight:700;}
+  .kicker .dot{background:var(--purple-deep);}
+  .stat-label{color:rgba(255,255,255,.82);}
+  .accred-text{color:rgba(255,255,255,.85);}
+  .hero-card{border-radius:0;}
+  .eyebrow-line span.tick{height:4px;width:34px;}
+  .why-grid{border-radius:0;}
+  .why-item{border-left:4px solid var(--purple);}
+  .why-item:nth-child(3n+2){border-left-color:var(--secondary);}
+  .why-item:nth-child(3n+3){border-left-color:var(--gold);}
+  #entry{background:var(--purple) !important;}
+  #entry .section-head h2{color:#fff !important;}
+  #entry .eyebrow-line span.label{color:var(--gold-light) !important;}
+  #entry .entry-list li{color:#fff !important;border-bottom-color:rgba(255,255,255,.18);}
+  #entry .entry-num{color:var(--gold-light) !important;}
+  #entry .lang-box{background:#fff;border-color:#fff;border-radius:0;}
+  #entry .lang-box .stat-num{color:var(--purple);}
+  #entry .lang-box h4{color:var(--secondary) !important;}
+  #entry .lang-box p{color:var(--ink) !important;}
+  .careers-band{border-top:6px solid var(--purple);border-bottom:6px solid var(--purple);}
+  .testi{border-radius:0;border-left:8px solid var(--gold);box-shadow:none;padding:56px;}
+  .avatar-slot{border-radius:4px;background:linear-gradient(150deg,var(--purple),var(--secondary));}
+  .choose-card{border-radius:0;border-top:4px solid var(--purple);}
+  .choose-card:nth-child(3n+2){border-top-color:var(--secondary);}
+  .choose-card:nth-child(3n+3){border-top-color:var(--gold);}
+  .tilt-card:hover{box-shadow:none !important;border-color:var(--line) !important;background:var(--purple-soft);}
+  .final-cta{background:var(--secondary);border-radius:0;box-shadow:none;}
+  .final-ctas .btn-white{background:#fff;color:var(--secondary);}
+  .final-ctas .btn-white:hover{background:var(--gold);color:#fff;}
+  .final-ctas .btn-ghost:hover{background:var(--gold) !important;border-color:var(--gold) !important;color:#fff !important;}
+  .contact-form{border-radius:0;box-shadow:none;border:2px solid var(--purple);}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--secondary);box-shadow:0 0 0 3px rgba(148,47,108,.15);}
+  .form-submit{background:var(--secondary) !important;}
+  .form-submit:hover{background:var(--secondary-deep) !important;}
+  footer{border-top:6px solid var(--gold);color:rgba(255,255,255,.85);}
 </style>
 </head>
 <body>

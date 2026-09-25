@@ -5,23 +5,23 @@
 <meta name="description" content="Gain industry-aligned skills with a BEng (Hons) Electrical and Electronic Engineering with Foundation Year at Regent College London.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
   :root{
-    --purple:#0D3E62;
-    --purple-deep:#082A44;
-    --purple-soft:#EAF0F6;
-    --secondary:#942F6C;
-    --secondary-deep:#6E2150;
-    --accent-blue:#5C80E3;
-    --navy:#0D3E62;
-    --gold:#C9A24B;
-    --gold-light:#E9CD60;
-    --ink:#1C1230;
-    --ink-soft:#5B5470;
-    --paper:#FFFFFF;
-    --line:#E4DEEF;
-    --radius:14px;
+    --purple:#171018;
+    --purple-deep:#0A0710;
+    --purple-soft:#1C1420;
+    --secondary:#2F6E5B;
+    --secondary-deep:#1F4B3D;
+    --accent-blue:#4A2F6E;
+    --navy:#171018;
+    --gold:#D4AF37;
+    --gold-light:#F0D583;
+    --ink:#F4F1EA;
+    --ink-soft:#B9B3A4;
+    --paper:#0B0710;
+    --line:rgba(244,241,234,.14);
+    --radius:12px;
     box-sizing:border-box;
     padding-top:env(safe-area-inset-top,0px);
     padding-bottom:env(safe-area-inset-bottom,0px);
@@ -360,20 +360,51 @@
     .headerbar{padding:12px 18px;gap:10px;}
     .final-ctas{flex-direction:column;align-items:stretch;width:100%;}
     .final-ctas .btn{width:100%;text-align:center;justify-content:center;}
+    .hero-ctas{flex-direction:column;align-items:stretch;width:100%;}
+    .hero-ctas .btn{width:100%;text-align:center;justify-content:center;}
   }
 
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --paper:#0B1620;--ink:#F0F4F8;--ink-soft:#AEBCC9;--line:#20303E;--purple-soft:#132A3E;
-    }
-    :root:not([data-theme="light"]) header{background:rgba(21,11,34,.9);}
-    :root:not([data-theme="light"]) .why-item{background:#1C1030;}
-    :root:not([data-theme="light"]) .why-grid{background:#31234A;border-color:#31234A;}
-    :root:not([data-theme="light"]) .lang-box{background:#241238;border-color:#31234A;}
-  }
-  :root[data-theme="dark"]{
-    --paper:#0B1620;--ink:#F0F4F8;--ink-soft:#AEBCC9;--line:#20303E;--purple-soft:#132A3E;
-  }
+  /* ---------- dark luxe theme ---------- */
+  h1,h2,h3{font-family:'Sora',system-ui,sans-serif;font-weight:700;}
+  .stat-num,.accred-badge,.quote-mark,.avatar-slot,.foot-col h4{font-family:'Sora',system-ui,sans-serif;}
+  header{background:rgba(11,7,16,.85);}
+  .brand img{filter:brightness(0) invert(1);}
+  .partner-logo{background:#fff;padding:5px 10px;border-radius:8px;}
+  nav.mainnav a{color:var(--ink);}
+  nav.mainnav a:hover{color:var(--gold-light);}
+  .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--purple-deep);box-shadow:0 10px 30px -10px rgba(212,175,55,.5);}
+  .btn-primary:hover{background:linear-gradient(135deg,var(--gold-light),var(--gold));box-shadow:0 14px 34px -10px rgba(212,175,55,.6);}
+  .btn-white{background:var(--gold);color:var(--purple-deep);box-shadow:0 10px 24px -10px rgba(212,175,55,.45);}
+  .btn-white:hover{background:var(--gold-light);color:var(--purple-deep);box-shadow:0 14px 28px -10px rgba(212,175,55,.55);}
+  .why-item{background:rgba(244,241,234,.03);}
+  .why-item:hover{background:rgba(244,241,234,.07);}
+  .why-item:hover .why-mark{background:var(--purple-deep) !important;}
+  .why-mark svg{stroke:var(--gold) !important;}
+  .choose-icon svg{stroke:var(--gold) !important;}
+  .choose-card{background:rgba(244,241,234,.03);}
+  .contact-form{background:rgba(244,241,234,.03);}
+  footer{background:#12101A;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.15);}
+  .section-head h2,
+  .contact-info h2,
+  .final-cta h2{color:var(--ink);}
+  .section-head p,
+  .why-item p,
+  .entry-list li,
+  .lang-box p,
+  .testi blockquote,
+  .choose-card p,
+  .contact-info p,
+  .contact-point span,
+  .final-cta p{color:var(--ink);}
+  p{color:var(--ink) !important;}
+  .lang-box h4,.testi-attr,.choose-card h3,.contact-point strong,.field label{color:var(--gold-light) !important;}
+  .testi-attr strong{color:var(--ink) !important;}
+  #why-study .eyebrow-line span.label,
+  #entry .eyebrow-line span.label,
+  #why-rcl .eyebrow-line span.label,
+  #contact .eyebrow-line span.label,
+  body > main > section:not(.careers-band) .eyebrow-line span.label{color:var(--gold-light);}
 </style>
 </head>
 <body>

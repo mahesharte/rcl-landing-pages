@@ -5,23 +5,23 @@
 <meta name="description" content="Gain industry-aligned skills with a BEng (Hons) Electrical and Electronic Engineering with Foundation Year at Regent College London.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
   :root{
-    --purple:#0D3E62;
-    --purple-deep:#082A44;
-    --purple-soft:#EAF0F6;
-    --secondary:#942F6C;
-    --secondary-deep:#6E2150;
-    --accent-blue:#5C80E3;
-    --navy:#0D3E62;
-    --gold:#C9A24B;
-    --gold-light:#E9CD60;
-    --ink:#1C1230;
-    --ink-soft:#5B5470;
-    --paper:#FFFFFF;
-    --line:#E4DEEF;
-    --radius:14px;
+    --purple:#1E3D2E;
+    --purple-deep:#122318;
+    --purple-soft:#F1ECDF;
+    --secondary:#7A2E33;
+    --secondary-deep:#551F23;
+    --accent-blue:#A9823F;
+    --navy:#1E3D2E;
+    --gold:#AD8A3F;
+    --gold-light:#D9BE7A;
+    --ink:#241F1A;
+    --ink-soft:#6E6455;
+    --paper:#FBF8F2;
+    --line:#E3DACA;
+    --radius:3px;
     box-sizing:border-box;
     padding-top:env(safe-area-inset-top,0px);
     padding-bottom:env(safe-area-inset-bottom,0px);
@@ -360,20 +360,61 @@
     .headerbar{padding:12px 18px;gap:10px;}
     .final-ctas{flex-direction:column;align-items:stretch;width:100%;}
     .final-ctas .btn{width:100%;text-align:center;justify-content:center;}
+    .hero-ctas{flex-direction:column;align-items:stretch;width:100%;}
+    .hero-ctas .btn{width:100%;text-align:center;justify-content:center;}
   }
 
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --paper:#0B1620;--ink:#F0F4F8;--ink-soft:#AEBCC9;--line:#20303E;--purple-soft:#132A3E;
-    }
-    :root:not([data-theme="light"]) header{background:rgba(21,11,34,.9);}
-    :root:not([data-theme="light"]) .why-item{background:#1C1030;}
-    :root:not([data-theme="light"]) .why-grid{background:#31234A;border-color:#31234A;}
-    :root:not([data-theme="light"]) .lang-box{background:#241238;border-color:#31234A;}
-  }
-  :root[data-theme="dark"]{
-    --paper:#0B1620;--ink:#F0F4F8;--ink-soft:#AEBCC9;--line:#20303E;--purple-soft:#132A3E;
-  }
+  /* ---------- editorial classic theme ---------- */
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;}
+  .stat-num,.accred-badge,.quote-mark,.avatar-slot,.foot-col h4{font-family:'Fraunces',serif;}
+  header{background:rgba(251,248,242,.95);}
+  nav.mainnav a{color:var(--ink);}
+  nav.mainnav a:hover{color:var(--secondary);}
+  .btn{border-radius:2px;text-transform:uppercase;letter-spacing:.08em;font-size:12.5px;padding:14px 26px;}
+  .btn-primary{box-shadow:none;border-color:var(--purple);}
+  .btn-primary:hover{box-shadow:none;}
+  .btn-white{box-shadow:none;}
+  .btn-white:hover{box-shadow:none;color:var(--purple);}
+  .kicker{border-radius:2px;text-transform:uppercase;letter-spacing:.1em;}
+  .eyebrow-line span.tick{height:1px;}
+  .eyebrow-line span.label{letter-spacing:.16em;}
+  .why-grid{box-shadow:none;border-radius:2px;}
+  .why-item{background:var(--paper);}
+  .why-item:hover{background:var(--purple-soft);}
+  .why-mark{border-radius:2px;}
+  .why-mark svg{stroke:var(--purple) !important;}
+  .lang-box,.contact-form,.testi,.hero-card,.choose-card,.final-cta{border-radius:2px;}
+  .lang-box,.contact-form{box-shadow:none;border:1px solid var(--line);}
+  .contact-form{background:var(--paper);}
+  .testi{box-shadow:none;border:1px solid var(--line);}
+  .choose-card{box-shadow:none !important;}
+  .tilt-card:hover{box-shadow:none !important;border-color:var(--purple) !important;}
+  .stat-label{color:#DCE3D4;}
+  .accred-text{color:#EDEAE0;}
+  .final-cta p{color:#F1EEE4 !important;}
+  footer{background:var(--purple-deep);color:#EDE8DA;}
+  .foot-bottom{color:var(--gold-light);}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--secondary);box-shadow:0 0 0 3px rgba(122,46,51,.12);}
+  .section-head h2,
+  .contact-info h2,
+  .final-cta h2{color:var(--ink);}
+  .section-head p,
+  .why-item p,
+  .entry-list li,
+  .lang-box p,
+  .testi blockquote,
+  .choose-card p,
+  .contact-info p,
+  .contact-point span,
+  .final-cta p{color:var(--ink);}
+  p{color:var(--ink) !important;}
+  .lang-box h4,.testi-attr,.choose-card h3,.contact-point strong,.field label{color:var(--secondary) !important;}
+  .testi-attr strong{color:var(--ink) !important;}
+  #why-study .eyebrow-line span.label,
+  #entry .eyebrow-line span.label,
+  #why-rcl .eyebrow-line span.label,
+  #contact .eyebrow-line span.label,
+  body > main > section:not(.careers-band) .eyebrow-line span.label{color:var(--secondary);}
 </style>
 </head>
 <body>
