@@ -1,6 +1,7 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
 <title>Electrical and Electronic Engineering with Foundation Year | RCL</title>
 <meta name="description" content="Gain industry-aligned skills with a BEng (Hons) Electrical and Electronic Engineering with Foundation Year at Regent College London.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +24,7 @@
     --line:#E4DEEF;
     --radius:14px;
     box-sizing:border-box;
+    color-scheme:light;
     padding-top:env(safe-area-inset-top,0px);
     padding-bottom:env(safe-area-inset-bottom,0px);
   }
@@ -362,18 +364,7 @@
     .final-ctas .btn{width:100%;text-align:center;justify-content:center;}
   }
 
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --paper:#0B1620;--ink:#F0F4F8;--ink-soft:#AEBCC9;--line:#20303E;--purple-soft:#132A3E;
-    }
-    :root:not([data-theme="light"]) header{background:rgba(21,11,34,.9);}
-    :root:not([data-theme="light"]) .why-item{background:#1C1030;}
-    :root:not([data-theme="light"]) .why-grid{background:#31234A;border-color:#31234A;}
-    :root:not([data-theme="light"]) .lang-box{background:#241238;border-color:#31234A;}
-  }
-  :root[data-theme="dark"]{
-    --paper:#0B1620;--ink:#F0F4F8;--ink-soft:#AEBCC9;--line:#20303E;--purple-soft:#132A3E;
-  }
+  /* dark-mode overrides intentionally disabled: page must always render in light mode */
 </style>
 </head>
 <body>
